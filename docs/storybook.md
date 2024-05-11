@@ -1,4 +1,8 @@
-Документация [Storybook](https://storybook.js.org/docs/get-started)
+### Документация [Storybook](https://storybook.js.org/docs/get-started)
+
+## Настройки Storybook
+
+---
 
 Пример:
 

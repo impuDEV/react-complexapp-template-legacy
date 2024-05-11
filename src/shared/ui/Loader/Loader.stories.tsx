@@ -9,7 +9,6 @@ export default {
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
-
 } as ComponentMeta<typeof Loader>
 
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />

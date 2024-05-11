@@ -3,25 +3,40 @@
 
 ## Конфигурация проекта
 
-Для разработки проект содержит 2 конфига:
-1) [Webpack](./docs/configs/webpack.md)
-2) Vite - [vite.config.ts](./vite.config.ts)
+Для разработки в проекте сконфигурированы два сборщика:
+1) [Webpack](./docs/configs/webpack.md) - более развитый но довольно медленный
+2) Vite - [vite.config.ts](https://vitejs.dev/config/) - быстрый сборщик на случай крупных проектов
 
-Вся конфигурация хранится в /config
-- /config/babel - babel
-- /config/build - webpack
-- /config/jest - тестовая среда
-- /config/storybook - storybook
+### Вся конфигурация хранится в:
+- `/config/babel` - Babel
+- `/config/build` - Декомпозиция webpack конфигурации
+- `/config/jest` - Тестовая среда
+- `/config/storybook` - Storybook
+
+
+- `/.browserslistrc.json`
+- `/tsconfig.json`
+- `/.eslintrc.js`
+- `/babel.config.json`
+- `/.stylelintrc.json`
+- `/.prettierrc.json` + `/.prettierignore`
+- `/netlify.toml`
+
+### Дополнительные настройки в слое shared `shared/config`:
+- `i18n` - настройка блока поддержки переводов для основы и тестовой среды
+- `storybook` - декораторы для корректной работы Storybook с компонетами проета
 
 ---
-
 ## Важные папки проекта
 - `src` - Исходный код проекта
 - `json-server` - Симуляция бэкэнда ([Github](https://github.com/typicode/json-server)) подобно [JSON Placeholder](https://jsonplaceholder.typicode.com/)
 - `scripts` - Библиотека вспомогательных скриптов для рефакторинга\упрощения написания кода, генерации отчётов и т.д.
+- `reports` - Автоматически создаваемая папка для сгенерированных отчётов
+
+---
 
 ## Запуск проекта
-Устанавливаем зависимости после клонирования проекта
+Устанавка зависимостей проекта (после клонирования например)
 ```shell
 npm install
 ```
@@ -33,34 +48,8 @@ npm run start:dev
 ```shell
 npm run start:dev:vite
 ```
-## Скрипты
 
-- `npm run start` - Запуск frontend проекта на webpack dev server
-- `npm run start:vite` - Запуск frontend проекта на vite
-- `npm run start:dev` - Запуск frontend проекта на webpack dev server + backend
-- `npm run start:dev:vite` - Запуск frontend проекта на vite + backend
-- `npm run start:dev:server` - Запуск backend сервера
-- `npm run build:prod` - Сборка в рпежиме prod
-- `npm run build:dev` - Сборка в рпежиме dev (не минимизирован)
-- `npm run lint:ts` - Проверка ts файлов линтером
-- `npm run lint:ts:fix` - Исправление ts файлов линтером
-- `npm run lint:scss` - Проверка scss файлов style линтером
-- `npm run lint:scss:fix` - Исправление scss файлов style линтером
-- `npm run test:unit` - Запуск unit тестов с jest
-- `npm run test:ui` - Запуск скриншотных тестов с loki
-- `npm run test:ui:ok` - Подтверждение новых скриншотов
-- `npm run test:ui:ci` - Запуск скриншотных тестов в CI
-- `npm run test:ui:report` - Генерация полного отчёта для скриншотных тестов
-- `npm run test:ui:json` - Генерация JSON отчёта для скриншотных тестов
-- `npm run test:ui:html` - Генерация HTML отчёта для скриншотных тестов
-- `npm run storybook` - Запуск Storybook
-- `npm run storybook:build` - Сборка Storybook билда
-- `npm run prepare` - прекоммит хуки
-- `npm run generate:slice` - Скрипт генерации FSD слайсов
-
-----
-
-## Поддержка мультиязычности
+## Работа с переводами (локализация на языках)
 
 Используется библиотека `i18next`. Файлы с переводами хранятся в [public/locales](./public/locales)
 
@@ -70,26 +59,13 @@ npm run start:dev:vite
 
 ----
 
-## Тестирование
-
-В проекте используется 4 вида тестирования:
-1) Unit тесты на jest - `npm run test:unit`
-2) Тесты на компоненты с React testing library - `npm run test:unit`
-3) Скриншотное тестирование с loki - `npm run test:ui`
-4) e2e тестирование с Cypress - `npm run test:e2e`
-
-Подробнее о тестах - [документация тестирования](./docs/tests.md)
-
-----
-
 ## Стилистика кода (Линтинг)
 
 Используется [ESLint](https://eslint.org/) и [Prettier](https://prettier.io/) для проверки typescript кода и [Stylelint](https://stylelint.io/) для проверки файлов со стилями.
 
-Также для строгого контроля архитектурных правил используется собственный eslint plugin: 
+Также для строгого контроля архитектурных правил используется собственный eslint plugin:
 
-*eslint-plugin-module-import-plugin*
-
+*eslint-plugin-impudev-fsd*
 который содержит 3 правила:
 1) path-checker - запрещает использовать абсолютные импорты в границах одного модуля
 2) layer-imports - проверяет корректность использования слоёв по правилам FSD
@@ -101,6 +77,16 @@ npm run start:dev:vite
 - `npm run lint:ts:fix` - Исправление ts файлов линтером
 - `npm run lint:scss` - Проверка scss файлов style линтером
 - `npm run lint:scss:fix` - Исправление scss файлов style линтером
+----
+
+## Тестирование
+
+В проекте используется 3 вида тестирования:
+1) Unit тесты на `Jest` / `React testing library` - `npm run test:unit`
+3) Скриншотное тестирование с loki - `npm run test:ui`
+4) e2e тестирование с Cypress - `npm run test:e2e`
+
+[Подробнее о тестах](./docs/tests.md)
 
 ----
 
@@ -115,7 +101,6 @@ npm run start:dev:vite
 - `npm run storybook`
 
 Подробнее о [Storybook](./docs/storybook.md)
-
 
 ----
 
@@ -154,14 +139,39 @@ npm run start:dev:vite
 1. Название удаляемого feature-flag
 2. Состояние (on\off)
 
+
+---
+
+## Скрипты
+
+- `npm run start` - Запуск frontend проекта на webpack dev server
+- `npm run start:vite` - Запуск frontend проекта на vite
+- `npm run start:dev` - Запуск frontend проекта на webpack dev server + backend
+- `npm run start:dev:vite` - Запуск frontend проекта на vite + backend
+- `npm run start:dev:server` - Запуск backend сервера
+- `npm run build:prod` - Сборка в рпежиме prod
+- `npm run build:dev` - Сборка в рпежиме dev (не минимизирован)
+- `npm run lint:ts` - Проверка ts файлов линтером
+- `npm run lint:ts:fix` - Исправление ts файлов линтером
+- `npm run lint:scss` - Проверка scss файлов style линтером
+- `npm run lint:scss:fix` - Исправление scss файлов style линтером
+- `npm run test:unit` - Запуск unit тестов с jest
+- `npm run test:ui` - Запуск скриншотных тестов с loki
+- `npm run test:ui:ok` - Подтверждение новых скриншотов
+- `npm run test:ui:ci` - Запуск скриншотных тестов в CI
+- `npm run test:ui:report` - Генерация полного отчёта для скриншотных тестов
+- `npm run test:ui:json` - Генерация JSON отчёта для скриншотных тестов
+- `npm run test:ui:html` - Генерация HTML отчёта для скриншотных тестов
+- `npm run storybook` - Запуск Storybook
+- `npm run storybook:build` - Сборка Storybook билда
+- `npm run prepare` - прекоммит хуки
+- `npm run generate:slice` - Скрипт генерации FSD слайсов
+
 ----
 
 ## Сущности (entities)
 
 - [Counter](./src/entities/Counter)
-- [Country](./src/entities/Country)
-- [Currency](./src/entities/Currency)
-- [Notification](./src/entities/Notification)
 - [User](./src/entities/User)
 
 ## Функционал (features)

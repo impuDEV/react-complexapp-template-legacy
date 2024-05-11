@@ -3,7 +3,7 @@ import { Page } from '@/widgets/Page'
 import { Counter } from '@/entities/Counter'
 
 const MainPage = () => {
-	const { t } = useTranslation()
+	const { t } = useTranslation('main-page')
 
 	return (
 		<Page data-testid="MainPage">

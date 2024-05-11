@@ -3,7 +3,7 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames'
 import cls from './Button.module.scss'
 
 export enum ButtonTheme {
-    GHOST = 'ghost',
+	GHOST = 'ghost',
 	GHOST_INVERTED = 'ghostInverted',
 	OUTLINE = 'outline',
 	OUTLINE_RED = 'outline_red',
@@ -17,12 +17,12 @@ export enum ButtonSize {
 	XL = 'size_xl',
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
-    className?: string
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+	className?: string
 	/**
-	 * Тема кнопки. Отвечает за визуал (в рамке, без стилей, инвертированный цвет...)
+	 * Вариация кнопки. Отвечает за визуал (в рамке, без стилей, инвертированный цвет...)
 	 */
-    theme?: ButtonTheme
+	variant?: ButtonTheme
 	/**
 	 * Флаг делающий кнопку квадратной
 	 */
@@ -49,7 +49,7 @@ export const Button = memo((props: ButtonProps) => {
 	const {
 		className,
 		children,
-		theme = ButtonTheme.OUTLINE,
+		variant = ButtonTheme.OUTLINE,
 		square,
 		disabled,
 		fullWidth,
@@ -58,7 +58,7 @@ export const Button = memo((props: ButtonProps) => {
 	} = props
 
 	const mods: Mods = {
-		[cls[theme]]: true,
+		[cls[variant]]: true,
 		[cls.square]: square,
 		[cls[size]]: true,
 		[cls.disabled]: disabled,

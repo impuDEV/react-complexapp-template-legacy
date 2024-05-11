@@ -7,14 +7,14 @@ const defaultAsyncReducers: ReducersList = {
 	loginForm: loginReducer,
 }
 
-export const StoreDecorator = (
-	state: DeepPartial<StateSchema>,
-	asyncReducers?: ReducersList,
-) => (StoryComponent: Story) => (
-	<StoreProvider
-		initialSate={state}
-		asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}
-	>
-		<StoryComponent />
-	</StoreProvider>
-)
+export const StoreDecorator =
+	(state: DeepPartial<StateSchema>, asyncReducers?: ReducersList) =>
+	(StoryComponent: Story) =>
+		(
+			<StoreProvider
+				initialSate={state}
+				asyncReducers={{ ...defaultAsyncReducers, ...asyncReducers }}
+			>
+				<StoryComponent />
+			</StoreProvider>
+		)

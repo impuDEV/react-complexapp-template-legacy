@@ -9,10 +9,10 @@ declare module '*.scss' {
 declare module '*.png'
 declare module '*.jpg'
 declare module '*.jpeg'
-declare module '*.svg' {
-	import React from 'react'
+declare module '*.svg?react' {
+	import { FC, SVGProps } from 'react'
 
-	const SVG: React.VFC<React.SVGProps<SVGSVGElement>>
+	const SVG: FC<SVGProps<SVGElement>>
 	export default SVG
 }
 

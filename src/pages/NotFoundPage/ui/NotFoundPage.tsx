@@ -5,14 +5,14 @@ import { Page } from '@/widgets/Page'
 import cls from './NotFoundPage.module.scss'
 
 interface NotFoundPageProps {
-    className?: string
+	className?: string
 }
 
 export const NotFoundPage = ({ className }: NotFoundPageProps) => {
 	const { t } = useTranslation()
 	return (
-	// for single page
-	// <Navigate to="/" replace={true} />
+		// for single page
+		// <Navigate to="/" replace={true} />
 
 		<Page
 			data-testid="NotFoundPage"

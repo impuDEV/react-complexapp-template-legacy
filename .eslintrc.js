@@ -5,8 +5,11 @@ module.exports = {
 		jest: true,
 	},
 	extends: [
+		'eslint:recommended',
 		'plugin:react/recommended',
 		'airbnb',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:react-hooks/recommended',
 		'plugin:i18next/recommended',
 		'plugin:storybook/recommended',
 		'prettier',
@@ -24,7 +27,7 @@ module.exports = {
 		'@typescript-eslint',
 		'i18next',
 		'react-hooks',
-		'module-import-plugin',
+		'eslint-plugin-impudev-fsd',
 		'unused-imports',
 	],
 	rules: {
@@ -85,15 +88,15 @@ module.exports = {
 		'jsx-a11y/click-events-have-key-events': 'off',
 		'object-curly-spacing': ['error', 'always'],
 		'arrow-body-style': 'off',
-		'module-import-plugin/path-checker': ['error', { alias: '@' }],
-		'module-import-plugin/layer-imports': [
+		'impudev-fsd/path-checker': ['error', { alias: '@' }],
+		'impudev-fsd/layer-imports': [
 			'error',
 			{
 				alias: '@',
 				ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
 			},
 		],
-		'module-import-plugin/public-api-imports': [
+		'impudev-fsd/public-api-imports': [
 			'error',
 			{
 				alias: '@',

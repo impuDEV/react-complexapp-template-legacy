@@ -9,7 +9,6 @@ export default {
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
-
 } as ComponentMeta<typeof AboutPage>
 
 const Template: ComponentStory<typeof AboutPage> = () => <AboutPage />

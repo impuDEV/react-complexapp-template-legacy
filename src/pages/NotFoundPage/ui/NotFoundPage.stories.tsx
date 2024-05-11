@@ -10,10 +10,11 @@ export default {
 	argTypes: {
 		backgroundColor: { control: 'color' },
 	},
-
 } as ComponentMeta<typeof NotFoundPage>
 
-const Template: ComponentStory<typeof NotFoundPage> = (args) => <NotFoundPage {...(args as Record<string, unknown>)} />
+const Template: ComponentStory<typeof NotFoundPage> = (args) => (
+	<NotFoundPage {...(args as Record<string, unknown>)} />
+)
 
 export const Normal = Template.bind({})
 Normal.args = {}
