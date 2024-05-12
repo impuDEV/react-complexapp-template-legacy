@@ -14,7 +14,6 @@ export default {
 			},
 		},
 		'@storybook/addon-interactions',
-		'@storybook/addon-styling-webpack',
 		'storybook-addon-mock',
 		'storybook-addon-themes',
 	],
@@ -33,8 +32,9 @@ export default {
 			src: path.resolve(__dirname, '..', '..', 'src'),
 			locales: '',
 			buildLocales: '',
+			reports: '',
 		}
-		config!.resolve?.modules?.push(paths.src)
+		config!.resolve!.modules!.push(paths.src)
 		config!.resolve!.extensions!.push('.ts', '.tsx')
 		config!.resolve!.alias = {
 			...config!.resolve!.alias,
@@ -68,9 +68,5 @@ export default {
 		)
 		// Return the altered config
 		return config
-	},
-
-	docs: {
-		autodocs: true,
 	},
 }

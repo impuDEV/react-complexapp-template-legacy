@@ -11,8 +11,8 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react-hooks/recommended',
 		'plugin:i18next/recommended',
-		'plugin:storybook/recommended',
 		'prettier',
+		'plugin:storybook/recommended',
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -27,14 +27,19 @@ module.exports = {
 		'@typescript-eslint',
 		'i18next',
 		'react-hooks',
-		'eslint-plugin-impudev-fsd',
+		'impudev-fsd',
 		'unused-imports',
 	],
 	rules: {
 		'linebreak-style': ['error', 'windows'],
 		quotes: ['error', 'single'],
 		semi: ['error', 'never'],
-		'no-tabs': ['error', { allowIndentationTabs: true }],
+		'no-tabs': [
+			'error',
+			{
+				allowIndentationTabs: true,
+			},
+		],
 		'no-undef': 'off',
 		'no-param-reassign': 'off',
 		'no-shadow': 'off',
@@ -83,12 +88,23 @@ module.exports = {
 				],
 			},
 		],
-		'max-len': ['error', { ignoreComments: true, code: 125 }],
+		'max-len': [
+			'error',
+			{
+				ignoreComments: true,
+				code: 125,
+			},
+		],
 		'jsx-a11y/no-static-element-interactions': 'off',
 		'jsx-a11y/click-events-have-key-events': 'off',
 		'object-curly-spacing': ['error', 'always'],
 		'arrow-body-style': 'off',
-		'impudev-fsd/path-checker': ['error', { alias: '@' }],
+		'impudev-fsd/path-checker': [
+			'error',
+			{
+				alias: '@',
+			},
+		],
 		'impudev-fsd/layer-imports': [
 			'error',
 			{
@@ -107,7 +123,12 @@ module.exports = {
 				],
 			},
 		],
-		'react/jsx-max-props-per-line': ['error', { maximum: 3 }],
+		'react/jsx-max-props-per-line': [
+			'error',
+			{
+				maximum: 3,
+			},
+		],
 		'react/no-unstable-nested-components': 'warn',
 	},
 	globals: {

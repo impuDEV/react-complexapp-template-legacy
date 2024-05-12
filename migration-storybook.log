@@ -27,96 +27,46 @@
 ✅ Installing new dependencies: @storybook/react-webpack5
 
 An error occurred while installing dependencies:
-NPM error ERESOLVE - Dependency resolution error.
+NPM error ETARGET - Package target not found.
 
 Please check the logfile generated at ./storybook.log for troubleshooting and try again.
 ❌ error when running new-frameworks migration
-HandledError: Error: NPM error ERESOLVE - Dependency resolution error.
+HandledError: Error: NPM error ETARGET - Package target not found.
 
 Please check the logfile generated at ./storybook.log for troubleshooting and try again.
-    at NPMProxy.addDependencies (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:33:75)
-    at async Object.run (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:347:755)
-    ... 4 lines matching cause stack trace ...
-    at async upgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:2097) {
+    at NPMProxy.addDependencies (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\node_modules\@storybook\core-common\dist\index.js:33:75)
+    at async Object.run (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:347:755)
+    ... 3 lines matching cause stack trace ...
+    at async Command.<anonymous> (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:670:2876) {
   handled: true,
-  cause: Error: NPM error ERESOLVE - Dependency resolution error.
+  cause: Error: NPM error ETARGET - Package target not found.
   
   Please check the logfile generated at ./storybook.log for troubleshooting and try again.
-      at NPMProxy.runAddDeps (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:35:5643)
-      at async NPMProxy.addDependencies (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:32:927)
-      at async Object.run (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:347:755)
-      at async runFixes (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:604:1794)
-      at async automigrate (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:602:1629)
-      at async doUpgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:1628)
-      at async withTelemetry (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-server\dist\index.js:28:3579)
-      at async upgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:2097)
+      at NPMProxy.runAddDeps (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\node_modules\@storybook\core-common\dist\index.js:35:5643)
+      at async NPMProxy.addDependencies (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\node_modules\@storybook\core-common\dist\index.js:32:927)
+      at async Object.run (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:347:755)
+      at async runFixes (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:604:1794)
+      at async automigrate (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:602:1629)
+      at async doAutomigrate (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:602:651)
+      at async Command.<anonymous> (C:\1Content\DEV\react-projs\react-complexapp-template\node_modules\@storybook\cli\dist\generate.js:670:2876)
 }
 
 
-🔎 found a 'storybook-binary' migration:
-╭ Automigration detected ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│                                                                                                                                            │
-│   We've detected you are using Storybook 8.0.10 without Storybook's storybook binary. Starting in Storybook 7.0, it has to be installed.   │
-│                                                                                                                                            │
-│                                                                                                                                            │
-│   More info: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#start-storybook--build-storybook-binaries-removed             │
-│                                                                                                                                            │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-? Do you want to run the 'storybook-binary' migration on your project? » (Y/n)√ Do you want to run the 'storybook-binary' migration on your project? ... yes
-
-✅ Adding 'storybook' as dev dependency
-
-
-An error occurred while installing dependencies:
-EPERM: operation not permitted, rename 'C:\Users\impud\AppData\Local\Temp\e1b01488a9bee9c50ec9084e8f645e3d\storybook.log' -> 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'
-❌ error when running storybook-binary migration
-HandledError: Error: EPERM: operation not permitted, rename 'C:\Users\impud\AppData\Local\Temp\e1b01488a9bee9c50ec9084e8f645e3d\storybook.log' -> 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'
-    at NPMProxy.addDependencies (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:33:75)
-    at async Object.run (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:290:477)
-    at async runFixes (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:604:1794)
-    at async automigrate (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:602:1629)
-    at async doUpgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:1628)
-    at async withTelemetry (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-server\dist\index.js:28:3579)
-    at async upgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:2097) {
-  handled: true,
-  cause: [Error: EPERM: operation not permitted, rename 'C:\Users\impud\AppData\Local\Temp\e1b01488a9bee9c50ec9084e8f645e3d\storybook.log' -> 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'] {
-    errno: -4048,
-    code: 'EPERM',
-    syscall: 'rename',
-    path: 'C:\\Users\\impud\\AppData\\Local\\Temp\\e1b01488a9bee9c50ec9084e8f645e3d\\storybook.log',
-    dest: 'C:\\1Content\\DEV\\react-projs\\react-complexapp-template\\storybook.log'
-  }
-}
-
-
-🔎 found a 'sb-scripts' migration:
-╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│                                                                                                                                               │
-│   We've detected you are using Storybook 8.0.10 with scripts from previous versions of Storybook.                                             │
-│   Starting in Storybook 7, the start-storybook and build-storybook binaries have changed to storybook dev and storybook build respectively.   │
-│   In order to work with Storybook 8.0.10, your storybook scripts have to be adjusted to use the binary. We can adjust them for you:           │
-│                                                                                                                                               │
-│   storybook                                                                                                                                   │
-│   from:                                                                                                                                       │
-│   start-storybook -p 6006 -c ./config/storybook                                                                                               │
-│   to:                                                                                                                                         │
-│   storybook dev -p 6006 -c ./config/storybook                                                                                                 │
-│                                                                                                                                               │
-│   storybook:build                                                                                                                             │
-│   from:                                                                                                                                       │
-│   build-storybook -c ./config/storybook                                                                                                       │
-│   to:                                                                                                                                         │
-│   storybook build -c ./config/storybook                                                                                                       │
-│                                                                                                                                               │
-│   In case this migration did not cover all of your scripts, or you'd like more info:                                                          │
-│   https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#start-storybook--build-storybook-binaries-removed                           │
-│                                                                                                                                               │
-╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-? Do you want to run the 'sb-scripts' migration on your project? » (Y/n)√ Do you want to run the 'sb-scripts' migration on your project? ... yes
-✅ Updating scripts in package.json
-
-
-✅ ran sb-scripts migration
+🔎 found a 'webpack5' migration:
+╭ Automigration detected ────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                        │
+│   We've detected you're running webpack 5.69.1.                                                        │
+│   Your Storybook's main.js files specifies webpack4, which is incompatible.                            │
+│                                                                                                        │
+│   To run Storybook in webpack5-mode, we can install Storybook's @storybook/builder-webpack5 for you.   │
+│                                                                                                        │
+│   More info: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#webpack-5-manager-build   │
+│                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'webpack5' migration on your project? » (Y/n)√ Do you want to run the 'webpack5' migration on your project? ... yes
+✅ Adding dependencies: @storybook/builder-webpack5@6.5.16
+✅ Setting `core.builder` to `@storybook/builder-webpack5` in main.js
+✅ ran webpack5 migration
 
 🔎 found a 'remove-jest-testing-library' migration:
 ╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────────────╮
@@ -130,28 +80,7 @@ HandledError: Error: EPERM: operation not permitted, rename 'C:\Users\impud\AppD
 │   Also, we can help you migrate your stories to use the new package.                                                         │
 │                                                                                                                              │
 ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-? Do you want to run the 'remove-jest-testing-library' migration on your project? » (Y/n)√ Do you want to run the 'remove-jest-testing-library' migration on your project? ... yes
-
-An error occurred while installing dependencies:
-EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'
-❌ error when running remove-jest-testing-library migration
-HandledError: Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'
-    at NPMProxy.addDependencies (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:33:75)
-    at async Object.run (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:508:296)
-    at async runFixes (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:604:1794)
-    at async automigrate (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:602:1629)
-    at async doUpgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:1628)
-    at async withTelemetry (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-server\dist\index.js:28:3579)
-    at async upgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:2097) {
-  handled: true,
-  cause: [Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'] {
-    errno: -4048,
-    code: 'EPERM',
-    syscall: 'lstat',
-    path: 'C:\\1Content\\DEV\\react-projs\\react-complexapp-template\\storybook.log'
-  }
-}
-
+? Do you want to run the 'remove-jest-testing-library' migration on your project? » (Y/n)√ Do you want to run the 'remove-jest-testing-library' migration on your project? ... no
 
 🔎 found a 'remove-argtypes-regex' migration:
 ╭ Manual migration detected ────────────────────────────────────────────────────────────────────────────────────╮
@@ -198,25 +127,6 @@ HandledError: Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\reac
 
 ? Select continue once you have made the required changes, or quit to exit the migration process » quit / continue√ Select continue once you have made the required changes, or quit to exit the migration process ... quit / continue
 
-🔎 found a 'autodocsTrue' migration:
-╭ Automigration detected ────────────────────────────────────────────────────────────────────────────╮
-│                                                                                                    │
-│   We've changed the configuration of autodocs (previous docsPage), so now the value:               │
-│     - docs.autodocs: true -- means automatically create docs for every CSF file                    │
-│     - docs.autodocs: 'tag' -- means only create autodocs for CSF files with the 'autodocs' tag     │
-│     - docs.autodocs: false -- means never create autodocs                                          │
-│                                                                                                    │
-│   Based on your prior configuration,  we can set the `docs.autodocs` to keep your old behaviour:   │
-│                                                                                                    │
-│   docs: { autodocs: true }                                                                         │
-│                                                                                                    │
-│   More info: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#autodocs-changes      │
-│                                                                                                    │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
-? Do you want to run the 'autodocsTrue' migration on your project? » (Y/n)√ Do you want to run the 'autodocsTrue' migration on your project? ... yes
-✅ Setting 'docs.autodocs' to true in main.js
-✅ ran autodocsTrue migration
-
 🔎 found a 'webpack5-compiler-setup' migration:
 ╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
 │                                                                                                                                                                  │
@@ -238,82 +148,8 @@ HandledError: Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\reac
 √ Which compiler would you like to use? » Babel
 Verifying @storybook/addon-webpack5-compiler-babel
 Installing @storybook/addon-webpack5-compiler-babel@^3.0.3
-
-An error occurred while installing dependencies:
-EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'
-❌ error when running webpack5-compiler-setup migration
-HandledError: Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'
-    at NPMProxy.addDependencies (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:33:75)
-    at async add (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:185:722)
-    at async Object.run (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:499:485)
-    at async runFixes (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:604:1794)
-    at async automigrate (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:602:1629)
-    at async doUpgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:1628)
-    at async withTelemetry (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-server\dist\index.js:28:3579)
-    at async upgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:2097) {
-  handled: true,
-  cause: [Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'] {
-    errno: -4048,
-    code: 'EPERM',
-    syscall: 'lstat',
-    path: 'C:\\1Content\\DEV\\react-projs\\react-complexapp-template\\storybook.log'
-  }
-}
-
-
-🔎 found a 'upgradeStorybookRelatedDependencies' migration:
-╭ Automigration detected ────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│                                                                                                                                        │
-│   You're upgrading to the latest version of Storybook. We recommend upgrading the following packages:                                  │
-│   - eslint-plugin-storybook: 0.6.7 => 0.8.0                                                                                            │
-│   - storybook-addon-mock: 3.2.0 => 5.0.0                                                                                               │
-│                                                                                                                                        │
-│   After upgrading, we will run the dedupe command, which could possibly have effects on dependencies that are not Storybook related.   │
-│   see: https://docs.npmjs.com/cli/commands/npm-dedupe                                                                                  │
-│                                                                                                                                        │
-│   Do you want to proceed (upgrade the detected packages)?                                                                              │
-│                                                                                                                                        │
-╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
-? Do you want to run the 'upgradeStorybookRelatedDependencies' migration on your project? » (y/N)√ Do you want to run the 'upgradeStorybookRelatedDependencies' migration on your project? ... yes
-Installing dependencies...
-
-An error occurred while installing dependencies.
-❌ error when running upgradeStorybookRelatedDependencies migration
-HandledError: Error: Command failed with exit code 1: npm install
-    at NPMProxy.installDependencies (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:28:4695)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async Object.run (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:556:541)
-    ... 2 lines matching cause stack trace ...
-    at async doUpgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:1628)
-    at async withTelemetry (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-server\dist\index.js:28:3579)
-    at async upgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:2097) {
-  handled: true,
-  cause: Error: Command failed with exit code 1: npm install
-      at makeError (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\execa\lib\error.js:60:11)
-      at handlePromise (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\execa\index.js:118:26)
-      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-      at async NPMProxy.executeCommand (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:35:1755)
-      at async NPMProxy.runInstall (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:35:5071)
-      at async NPMProxy.installDependencies (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:28:4590)
-      at async Object.run (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:556:541)
-      at async runFixes (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:604:1794)
-      at async automigrate (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:602:1629)
-      at async doUpgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:1628) {
-    shortMessage: 'Command failed with exit code 1: npm install',
-    command: 'npm install',
-    escapedCommand: 'npm install',
-    exitCode: 1,
-    signal: undefined,
-    signalDescription: undefined,
-    stdout: undefined,
-    stderr: undefined,
-    failed: true,
-    timedOut: false,
-    isCanceled: false,
-    killed: false
-  }
-}
-
+Adding '@storybook/addon-webpack5-compiler-babel' to main.js addons field.
+✅ ran webpack5-compiler-setup migration
 
 🔎 found a 'visual-tests-addon' migration:
 ╭ Automigration detected ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
@@ -327,58 +163,31 @@ HandledError: Error: Command failed with exit code 1: npm install
 │                                                                                                                                                                                   │
 ╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ? Do you want to run the 'visual-tests-addon' migration on your project? » (Y/n)√ Do you want to run the 'visual-tests-addon' migration on your project? ... yes
-
-An error occurred while installing dependencies:
-EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'
-❌ error when running visual-tests-addon migration
-HandledError: Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'
-    at NPMProxy.addDependencies (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-common\dist\index.js:33:75)
-    at async Object.run (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:539:141)
-    at async runFixes (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:604:1794)
-    at async automigrate (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:602:1629)
-    at async doUpgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:1628)
-    at async withTelemetry (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\core-server\dist\index.js:28:3579)
-    at async upgrade (C:\Users\impud\AppData\Local\npm-cache\_npx\bc7e1e37fcb46ffc\node_modules\@storybook\cli\dist\generate.js:618:2097) {
-  handled: true,
-  cause: [Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'] {
-    errno: -4048,
-    code: 'EPERM',
-    syscall: 'lstat',
-    path: 'C:\\1Content\\DEV\\react-projs\\react-complexapp-template\\storybook.log'
-  }
-}
-
-WARN An issue occurred while trying to find dependencies metadata using npm.
+✅ Adding "@chromatic-com/storybook" addon
+✅ ran visual-tests-addon migration
 
 ╭ Migration check ran with failures ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
 │                                                                                                                                                               │
 │   Successful migrations:                                                                                                                                      │
 │                                                                                                                                                               │
-│   sb-scripts, autodocsTrue                                                                                                                                    │
+│   webpack5, webpack5-compiler-setup, visual-tests-addon                                                                                                       │
 │                                                                                                                                                               │
 │   Failed migrations:                                                                                                                                          │
 │                                                                                                                                                               │
 │   new-frameworks:                                                                                                                                             │
-│   Error: NPM error ERESOLVE - Dependency resolution error.                                                                                                    │
+│   Error: NPM error ETARGET - Package target not found.                                                                                                        │
 │                                                                                                                                                               │
 │   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                                                    │
-│   storybook-binary:                                                                                                                                           │
-│   Error: EPERM: operation not permitted, rename 'C:\Users\impud\AppData\Local\Temp\e1b01488a9bee9c50ec9084e8f645e3d\storybook.log' ->                         │
-│   'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'                                                                                       │
-│   remove-jest-testing-library:                                                                                                                                │
-│   Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'                                          │
-│   webpack5-compiler-setup:                                                                                                                                    │
-│   Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'                                          │
-│   upgradeStorybookRelatedDependencies:                                                                                                                        │
-│   Error: Command failed with exit code 1: npm install                                                                                                         │
-│   visual-tests-addon:                                                                                                                                         │
-│   Error: EPERM: operation not permitted, lstat 'C:\1Content\DEV\react-projs\react-complexapp-template\storybook.log'                                          │
 │                                                                                                                                                               │
 │   You can find the full logs in C:\1Content\DEV\react-projs\react-complexapp-template\migration-storybook.log                                                 │
 │                                                                                                                                                               │
 │   Manual migrations:                                                                                                                                          │
 │                                                                                                                                                               │
 │   remove-argtypes-regex, removedglobalclientapis                                                                                                              │
+│                                                                                                                                                               │
+│   Skipped migrations:                                                                                                                                         │
+│                                                                                                                                                               │
+│   remove-jest-testing-library                                                                                                                                 │
 │                                                                                                                                                               │
 │   ─────────────────────────────────────────────────                                                                                                           │
 │                                                                                                                                                               │
